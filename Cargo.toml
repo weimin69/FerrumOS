@@ -2,5 +2,12 @@
 name = "FerrumOS"
 version = "0.1.0"
 edition = "2024"
+authors = ["Author Name <weiminkong2@gmail.com>"]
+
+[profile.release]
+panic = "abort"
+
+[profile.dev]
+panic = "abort"
 
 [dependencies]

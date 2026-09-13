@@ -1,0 +1,34 @@
+   0.002915833s  INFO prepare_target{force=false package_id=FerrumOS v0.1.0 (/Users/alax/code/FerrumOS) target="FerrumOS"}: cargo::core::compiler::fingerprint: stale: changed "/Users/alax/code/FerrumOS/src/main.rs"
+   0.002929458s  INFO prepare_target{force=false package_id=FerrumOS v0.1.0 (/Users/alax/code/FerrumOS) target="FerrumOS"}: cargo::core::compiler::fingerprint:           (vs) "/Users/alax/code/FerrumOS/target/debug/.fingerprint/FerrumOS-e0f85152d20d504b/dep-test-bin-FerrumOS"
+   0.002931750s  INFO prepare_target{force=false package_id=FerrumOS v0.1.0 (/Users/alax/code/FerrumOS) target="FerrumOS"}: cargo::core::compiler::fingerprint:                FileTime { seconds: 1789306672, nanos: 555857038 } < FileTime { seconds: 1789307204, nanos: 650264484 }
+   0.002976000s  INFO prepare_target{force=false package_id=FerrumOS v0.1.0 (/Users/alax/code/FerrumOS) target="FerrumOS"}: cargo::core::compiler::fingerprint: fingerprint dirty for FerrumOS v0.1.0 (/Users/alax/code/FerrumOS)/Check { test: true }/TargetInner { name: "FerrumOS", doc: true, ..: with_path("/Users/alax/code/FerrumOS/src/main.rs", Edition2024) }
+   0.002981791s  INFO prepare_target{force=false package_id=FerrumOS v0.1.0 (/Users/alax/code/FerrumOS) target="FerrumOS"}: cargo::core::compiler::fingerprint:     dirty: FsStatusOutdated(StaleItem(ChangedFile { reference: "/Users/alax/code/FerrumOS/target/debug/.fingerprint/FerrumOS-e0f85152d20d504b/dep-test-bin-FerrumOS", reference_mtime: FileTime { seconds: 1789306672, nanos: 555857038 }, stale: "/Users/alax/code/FerrumOS/src/main.rs", stale_mtime: FileTime { seconds: 1789307204, nanos: 650264484 } }))
+   0.003166583s  INFO prepare_target{force=false package_id=FerrumOS v0.1.0 (/Users/alax/code/FerrumOS) target="FerrumOS"}: cargo::core::compiler::fingerprint: fingerprint error for FerrumOS v0.1.0 (/Users/alax/code/FerrumOS)/Check { test: false }/TargetInner { name: "FerrumOS", doc: true, ..: with_path("/Users/alax/code/FerrumOS/src/main.rs", Edition2024) }
+   0.003169916s  INFO prepare_target{force=false package_id=FerrumOS v0.1.0 (/Users/alax/code/FerrumOS) target="FerrumOS"}: cargo::core::compiler::fingerprint:     err: failed to read `/Users/alax/code/FerrumOS/target/debug/.fingerprint/FerrumOS-1d863961329b1994/bin-FerrumOS`
+
+Caused by:
+    No such file or directory (os error 2)
+
+Stack backtrace:
+   0: std::backtrace::Backtrace::create
+   1: std::backtrace::Backtrace::capture
+   2: cargo_util::paths::read_bytes
+   3: cargo_util::paths::read
+   4: cargo::core::compiler::fingerprint::_compare_old_fingerprint
+   5: cargo::core::compiler::fingerprint::prepare_target
+   6: cargo::core::compiler::compile
+   7: <cargo::core::compiler::build_runner::BuildRunner>::compile
+   8: cargo::ops::cargo_compile::compile_ws
+   9: cargo::ops::cargo_compile::compile_with_exec
+  10: cargo::ops::cargo_compile::compile
+  11: cargo::commands::check::exec
+  12: <cargo::cli::Exec>::exec
+  13: cargo::main
+  14: std::sys::backtrace::__rust_begin_short_backtrace::<fn(), ()>
+  15: std::rt::lang_start::<()>::{closure#0}
+  16: std::rt::lang_start_internal
+  17: _main
+    Checking FerrumOS v0.1.0 (/Users/alax/code/FerrumOS)
+error: could not compile `FerrumOS` (bin "FerrumOS" test) due to 1 previous error
+warning: build failed, waiting for other jobs to finish...
+error: could not compile `FerrumOS` (bin "FerrumOS") due to 1 previous error
