@@ -4,6 +4,11 @@ version = "0.1.0"
 edition = "2024"
 authors = ["Author Name <weiminkong2@gmail.com>"]
 
+[[bin]]
+name = "blog_os"
+test = false
+bench = false
+
 [profile.release]
 panic = "abort"
 
